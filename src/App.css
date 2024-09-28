@@ -1,0 +1,41 @@
+:root {
+	--rose-bg: hsl(322, 100%, 98%);
+	--omellete-radius: 15px;
+}
+.omelette {
+	max-width: 700px;
+	background-color: white;
+
+	overflow: hidden;
+}
+.intruction-list li::marker {
+	font-weight: 700;
+
+}
+.intruction-list li {
+	@apply ml-6 mb-4;
+}
+
+.nutrition-table td {
+	@apply border-b border-slate-300 pb-3 ;
+}
+
+.omelette-header,
+.omelette-body {
+	@apply px-3;
+}
+
+@media screen and (width>375px) {
+	.omelette {
+		@apply p-4;
+		border-radius: var(--omellete-radius);
+	}
+	.omelette-header,
+	.omelette-body {
+		padding: 0px;
+	}
+
+	.omelette picture img {
+		border-radius: var(--omellete-radius);
+	}
+}
